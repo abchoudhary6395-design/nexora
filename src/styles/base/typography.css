@@ -1,0 +1,63 @@
+/* =========================================================
+   TYPOGRAPHY
+   Display face: Plus Jakarta Sans (headings, nav, KPIs)
+   Body face:    Inter (paragraphs, table cells, forms)
+   Data face:    JetBrains Mono (money, counts, IDs, deltas)
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); font-weight: var(--fw-semibold); }
+h5 { font-size: var(--fs-md); font-weight: var(--fw-semibold); }
+h6 { font-size: var(--fs-sm); font-weight: var(--fw-semibold); text-transform: uppercase; letter-spacing: 0.04em; }
+
+p {
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+}
+
+small, .nx-text-xs { font-size: var(--fs-xs); }
+
+/* Numeric / data typography — used for money, KPIs, IDs, table figures */
+.nx-numeric,
+.nx-kpi-value,
+.nx-money,
+.nx-table-cell--numeric {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.nx-eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.nx-text-muted   { color: var(--color-text-muted); }
+.nx-text-secondary { color: var(--color-text-secondary); }
+.nx-text-success { color: var(--color-success); }
+.nx-text-danger  { color: var(--color-danger); }
+.nx-text-warning { color: var(--color-warning); }

@@ -1,0 +1,106 @@
+.nx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  height: 38px;
+  border: 1px solid transparent;
+  transition: background var(--transition-fast), color var(--transition-fast),
+              border-color var(--transition-fast), box-shadow var(--transition-fast),
+              transform var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.nx-btn:active { transform: translateY(1px); }
+.nx-btn:disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+
+/* Variants */
+.nx-btn--primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+.nx-btn--primary:hover { background: var(--color-primary-hover); }
+.nx-btn--primary:focus-visible { box-shadow: var(--shadow-glow-primary); }
+
+.nx-btn--secondary {
+  background: var(--color-surface-alt);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+.nx-btn--secondary:hover { border-color: var(--color-border-strong); }
+
+.nx-btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.nx-btn--outline:hover { background: var(--color-primary-soft); }
+
+.nx-btn--ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+.nx-btn--ghost:hover { background: var(--color-bg); color: var(--color-text-primary); }
+
+.nx-btn--danger {
+  background: var(--color-danger);
+  color: white;
+}
+.nx-btn--danger:hover { background: var(--nx-rose-600); }
+
+.nx-btn--success {
+  background: var(--color-success);
+  color: white;
+}
+.nx-btn--success:hover { background: var(--nx-emerald-600); }
+
+/* Sizes */
+.nx-btn--sm { height: 30px; padding: 0 var(--space-3); font-size: var(--fs-xs); }
+.nx-btn--lg { height: 46px; padding: 0 var(--space-6); font-size: var(--fs-md); }
+
+/* Icon-only */
+.nx-btn--icon {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+/* Floating Action Button */
+.nx-btn--fab {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-sticky);
+}
+
+/* Loading state */
+.nx-btn--loading {
+  color: transparent !important;
+  position: relative;
+  pointer-events: none;
+}
+.nx-btn--loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  animation: nx-spin 0.6s linear infinite;
+}
+.nx-btn--outline.nx-btn--loading::after,
+.nx-btn--ghost.nx-btn--loading::after {
+  border-color: var(--color-border-strong);
+  border-top-color: var(--color-primary);
+}

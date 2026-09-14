@@ -1,0 +1,11 @@
+.nx-analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.nx-analytics-grid--full { grid-column: 1 / -1; }
+
+@media (max-width: 1023px) {
+  .nx-analytics-grid { grid-template-columns: 1fr; }
+}

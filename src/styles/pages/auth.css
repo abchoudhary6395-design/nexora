@@ -1,0 +1,124 @@
+.nx-auth {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-bg);
+}
+
+.nx-auth__panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+}
+
+.nx-auth__card {
+  width: 100%;
+  max-width: 380px;
+}
+
+.nx-auth__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.nx-auth__mark {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--nx-indigo-500), var(--nx-indigo-700));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: var(--fw-bold);
+  font-family: var(--font-display);
+}
+
+.nx-auth__title {
+  margin-bottom: var(--space-1);
+}
+
+.nx-auth__subtitle {
+  margin-bottom: var(--space-6);
+}
+
+.nx-auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.nx-auth__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-sm);
+}
+
+.nx-auth__link {
+  color: var(--color-primary);
+  font-weight: var(--fw-medium);
+}
+.nx-auth__link:hover { text-decoration: underline; }
+
+.nx-auth__footer {
+  margin-top: var(--space-6);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Right side — animated brand panel */
+.nx-auth__showcase {
+  position: relative;
+  background: radial-gradient(circle at 20% 20%, var(--nx-indigo-700), var(--nx-slate-violet-900) 65%);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-12);
+  color: white;
+}
+
+.nx-auth__showcase::before,
+.nx-auth__showcase::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+}
+.nx-auth__showcase::before {
+  width: 320px; height: 320px;
+  background: var(--nx-indigo-500);
+  top: -80px; right: -60px;
+}
+.nx-auth__showcase::after {
+  width: 260px; height: 260px;
+  background: var(--nx-amber-500);
+  bottom: -60px; left: -40px;
+  opacity: 0.18;
+}
+
+.nx-auth__showcase-content {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+}
+
+.nx-auth__showcase-content h2 {
+  color: white;
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.nx-auth__showcase-content p {
+  color: rgba(255,255,255,0.72);
+}
+
+@media (max-width: 1023px) {
+  .nx-auth { grid-template-columns: 1fr; }
+  .nx-auth__showcase { display: none; }
+}

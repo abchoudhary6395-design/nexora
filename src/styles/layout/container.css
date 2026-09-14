@@ -1,0 +1,27 @@
+.nx-app-shell {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+  background: var(--color-bg);
+  transition: grid-template-columns var(--transition-base);
+}
+
+.nx-app-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.nx-app-content {
+  flex: 1;
+  padding: var(--content-padding);
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin-inline: auto;
+}
+
+@media (max-width: 767px) {
+  .nx-app-shell {
+    grid-template-columns: 1fr;
+  }
+}

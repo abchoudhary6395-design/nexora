@@ -1,0 +1,84 @@
+.nx-doc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.nx-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-4);
+}
+
+.nx-doc-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  cursor: pointer;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+.nx-doc-card:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--color-border-strong);
+}
+
+.nx-doc-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nx-doc-card__name {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+.nx-doc-card__meta {
+  font-size: var(--fs-2xs);
+  color: var(--color-text-muted);
+}
+
+.nx-doc-folder-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+}
+.nx-doc-folder-row:hover { background: var(--color-bg); }
+.nx-doc-folder-row--active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: var(--fw-medium);
+}
+
+.nx-file-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-bold);
+}
+.nx-file-icon--pdf   { background: var(--nx-rose-500); }
+.nx-file-icon--xlsx  { background: var(--nx-emerald-500); }
+.nx-file-icon--docx  { background: var(--nx-indigo-500); }
+.nx-file-icon--pptx  { background: var(--nx-amber-500); }
+.nx-file-icon--zip   { background: var(--nx-gray-500); }
+.nx-file-icon--image { background: #9B59F6; }

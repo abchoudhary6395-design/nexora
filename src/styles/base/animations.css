@@ -1,0 +1,48 @@
+/* =========================================================
+   ANIMATION KEYFRAMES
+   Framer Motion handles component-level transitions;
+   these keyframes cover CSS-only effects (skeletons, spinners).
+   ========================================================= */
+
+@keyframes nx-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes nx-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes nx-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes nx-slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nx-pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(79, 94, 255, 0.35); }
+  50%      { box-shadow: 0 0 0 6px rgba(79, 94, 255, 0); }
+}
+
+.nx-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-border) 0%,
+    var(--color-gray-100, var(--color-border-strong)) 50%,
+    var(--color-border) 100%
+  );
+  background-size: 800px 100%;
+  animation: nx-shimmer 1.6s linear infinite;
+  border-radius: var(--radius-sm);
+}
+
+.nx-spin {
+  animation: nx-spin 0.7s linear infinite;
+}
+
+.nx-fade-in { animation: nx-fade-in var(--transition-slow) var(--ease-out); }
+.nx-slide-up { animation: nx-slide-up var(--transition-slow) var(--ease-out); }

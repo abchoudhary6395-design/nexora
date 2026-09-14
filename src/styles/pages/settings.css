@@ -1,0 +1,62 @@
+.nx-settings {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.nx-settings__tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-4));
+}
+
+.nx-settings__tab {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  text-align: left;
+}
+.nx-settings__tab:hover { background: var(--color-bg); }
+.nx-settings__tab--active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.nx-settings__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.nx-settings__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.nx-settings__row:last-child { border-bottom: none; }
+
+.nx-settings__row-label { font-weight: var(--fw-medium); font-size: var(--fs-sm); }
+.nx-settings__row-hint { font-size: var(--fs-xs); color: var(--color-text-muted); }
+
+.nx-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+@media (max-width: 767px) {
+  .nx-settings { grid-template-columns: 1fr; }
+  .nx-settings__tabs {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .nx-field-grid { grid-template-columns: 1fr; }
+}
