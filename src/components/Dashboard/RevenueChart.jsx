@@ -9,7 +9,7 @@ const data = [
   { month: 'May', revenue: 56800 },
   { month: 'Jun', revenue: 61200 },
   { month: 'Jul', revenue: 58900 },
-  { month: 'Aug', revenue: 68400 },
+  { month: 'Aug', revenue: 69400 },
 ];
 
 function CustomTooltip({ active, payload, label }) {
