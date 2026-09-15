@@ -27,7 +27,7 @@
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
   font-size: var(--fs-lg);
-  color: var(--color-text-inverse);
+  color: #fff;
 }
 
 .nx-sidebar__mark {
